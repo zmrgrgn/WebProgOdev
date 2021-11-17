@@ -1,0 +1,37 @@
+﻿@model WebProgOdev.Models.Text
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detay</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.yaziBaslik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.yaziBaslik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.yaziTarih)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.yaziTarih)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.yaziIcerik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.yaziIcerik)
+        </dd>
+       
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.yaziID">Düzenle</a> |
+    <a asp-action="Index">Listeye Git</a>
+</div>

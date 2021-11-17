@@ -1,0 +1,19 @@
+﻿@model WebProgOdev.Models.Text
+
+@{
+    ViewData["Title"] = "YaziDetails";
+}
+<div>
+    <hr />
+    <dl class="row">
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.yaziBaslik)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.yaziIcerik)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.yaziTarih)
+        </dd>
+    </dl>
+</div>

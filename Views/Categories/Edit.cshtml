@@ -1,0 +1,31 @@
+﻿@model WebProgOdev.Models.Category
+
+
+<h1>Düzenle</h1>
+
+<h4>Kategori</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="kategoriID" />
+            <div class="form-group">
+                <label asp-for="kategoriAdi" class="control-label">Kategori Adı</label>
+                <input asp-for="kategoriAdi" class="form-control" />
+                <span asp-validation-for="kategoriAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye Git</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

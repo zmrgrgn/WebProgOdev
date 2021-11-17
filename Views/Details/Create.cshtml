@@ -1,0 +1,40 @@
+﻿@model WebProgOdev.Models.Text
+
+<h1>Oluştur</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="yaziBaslik" class="control-label">Yazı Başlığı</label>
+                <input asp-for="yaziBaslik" class="form-control" />
+                <span asp-validation-for="yaziBaslik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="yaziTarih" class="control-label">Yazı Tarihi</label>
+                <input asp-for="yaziTarih" class="form-control" />
+                <span asp-validation-for="yaziTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="yaziIcerik" class="control-label">Yazı İçeriği</label>
+                <input asp-for="yaziIcerik" class="form-control" />
+                <span asp-validation-for="yaziIcerik" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye Git</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

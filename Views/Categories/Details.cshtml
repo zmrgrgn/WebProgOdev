@@ -1,0 +1,20 @@
+﻿@model WebProgOdev.Models.Category
+
+<h1>Detay</h1>
+
+<div>
+    <h4>Kategori</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kategoriAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kategoriAdi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.kategoriID">Düzenle</a> |
+    <a asp-action="Index">Listeye Git</a>
+</div>
